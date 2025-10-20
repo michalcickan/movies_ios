@@ -27,6 +27,7 @@
 		95BEFCA22EA6184000DE4A70 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BEFCB12EA6184200DE4A70 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BEFCBB2EA6184200DE4A70 /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95BEFD602EA684D400DE4A70 /* Movies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Movies.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -88,6 +89,13 @@
 				95BEFCA22EA6184000DE4A70 /* Movies.app */,
 				95BEFCB12EA6184200DE4A70 /* MoviesTests.xctest */,
 				95BEFCBB2EA6184200DE4A70 /* MoviesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95BEFD622EA684D400DE4A70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +206,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 95BEFCA32EA6184000DE4A70 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 95BEFD622EA684D400DE4A70 /* Products */;
+					ProjectRef = 95BEFD602EA684D400DE4A70 /* Movies.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				95BEFCA12EA6184000DE4A70 /* Movies */,
