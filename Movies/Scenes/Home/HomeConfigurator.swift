@@ -3,8 +3,10 @@ import SwiftUI
 
 struct HomeConfigurator: Routable {
     func makeView(coordinator: any NavigationCoordinator) -> AnyView {
-        let router = HomeRouter(rootCoordinator: coordinator)
-        let homeViewModel = HomeViewModel(router: router)
+        let homeViewModel = HomeViewModel(
+            router:  HomeRouter(rootCoordinator: coordinator),
+            service: HomeService()
+        )
         return AnyView(HomeView(viewModel: homeViewModel))
     }
 }

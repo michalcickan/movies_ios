@@ -1,14 +1,14 @@
 import SwiftUI
 
-struct HomeView: View {
-    @StateObject var viewModel: HomeViewModel
+struct HomeView<ViewModel: HomeViewModelType>: View {
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
-        List(viewModel.items.indices, id: \.self) { index in
+        List(viewModel.output.items.indices, id: \.self) { index in
             Button(action: {
-                viewModel.didSelectItem(at: index)
+                viewModel.input.didSelectItem(at: index)
             }) {
-                Text(viewModel.items[index])
+                Text(viewModel.output.items[index])
             }
         }
         .toolbar {
@@ -21,5 +21,10 @@ struct HomeView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView(
+        viewModel: HomeViewModel(
+            router: HomeRouter(rootCoordinator: AppRouter()),
+            service: HomeService()
+        )
+    )
 }
